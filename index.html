@@ -33,73 +33,6 @@
             padding: 0 20px;
         }
 
-        /* Emojis flotantes */
-        .floating-emojis {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .floating-emoji {
-            position: absolute;
-            font-size: 2rem;
-            opacity: 0.6;
-            animation: float-up linear infinite;
-        }
-
-        @keyframes float-up {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* Partículas brillantes */
-        .sparkles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: white;
-            border-radius: 50%;
-            animation: sparkle-fade 3s ease-in-out infinite;
-        }
-
-        @keyframes sparkle-fade {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
         .animated-bg {
             position: fixed;
             top: 0;
@@ -242,12 +175,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientText 3s ease infinite;
-        }
-
-        @keyframes gradientText {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
 
         .section-title p {
@@ -281,12 +208,6 @@
             margin-bottom: 15px;
             display: block;
             text-align: center;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
 
         .benefit-text {
@@ -422,7 +343,7 @@
         }
 
         .restaurant-card:hover {
-            transform: translateY(-8px) rotate(2deg);
+            transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
@@ -678,7 +599,6 @@
             .cities-list { grid-template-columns: 1fr; }
             .benefits-list { grid-template-columns: 1fr; }
             .logo { width: 80px; height: 80px; font-size: 2rem; }
-            .floating-emoji { font-size: 1.5rem; }
         }
 
         @media (min-width: 768px) {
@@ -693,12 +613,6 @@
 </head>
 <body>
     <div class="animated-bg"></div>
-    
-    <!-- Emojis flotantes -->
-    <div class="floating-emojis" id="floatingEmojis"></div>
-    
-    <!-- Partículas brillantes -->
-    <div class="sparkles" id="sparkles"></div>
 
     <section class="hero">
         <div class="container">
@@ -826,4 +740,370 @@
             <div class="cities-list">
                 <div class="city-item">📍 Lázaro Cárdenas, Mich.</div>
                 <div class="city-item">📍 Puerto Escondido, Oax.</div>
-                <div class="city-item">📍 Bahías de
+                <div class="city-item">📍 Bahías de Huatulco, Oax.</div>
+                <div class="city-item">📍 Salina Cruz, Oax.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h3>⚡ ¡Los cupos son limitados!</h3>
+            <p>Asegura tu lugar en la plataforma</p>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <a href="https://wa.me/527261604509?text=🚨%20CUPOS%20LIMITADOS%20-%20REGISTRO%20URGENTE%0A%0A**Nombre%20del%20Restaurante:**%20%0A**Nombre%20del%20Dueño:**%20%0A**Correo%20Electrónico:**%20%0A**Teléfono:**%20%0A**Dirección:**%20%0A**Tipo%20de%20Cocina:**%20%0A%0A¡Quiero%20asegurar%20mi%20lugar%20YA!" target="_blank" class="btn">🔥 Registrarme AHORA</a>
+                <a href="https://wa.me/527261604509?text=⏰%20LLAMADA%20URGENTE%20-%20CUPOS%20LIMITADOS%0A%0A**Nombre%20del%20Restaurante:**%20%0A**Hora%20preferida:**%20%0A%0A¡Necesito%20info%20antes%20que%20se%20agoten!" target="_blank" class="btn btn-whatsapp">📞 Llamada Urgente</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contract">
+        <div class="container">
+            <div class="section-title">
+                <h2>📋 Contrato de Colaboración</h2>
+                <p>Términos y condiciones transparentes</p>
+            </div>
+            <div class="contract-highlights">
+                <div class="highlight-card">
+                    <h3>💰 0% Comisiones</h3>
+                    <p>Sin cuotas mensuales ni comisiones por venta</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>💵 100% Ganancias</h3>
+                    <p>Recibes todo el dinero en efectivo directamente</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>📱 Registro Gratuito</h3>
+                    <p>Alta en la plataforma sin costo inicial</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>⚡ Penalizaciones Mínimas</h3>
+                    <p>Solo $50 por cancelación sin justificación</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://drive.google.com/file/d/1PRXZLfK5AtqURoII26tTLaVRi83JIDpt/view?usp=sharing" target="_blank" class="btn">📄 Ver Contrato</a>
+                <div class="contract-cta">
+                    <h3>🤝 ¿Listo para empezar?</h3>
+                    <p>Acepta estos términos favorables para tu negocio</p>
+                    <a href="https://wa.me/527261604509?text=✅%20ACEPTO%20TÉRMINOS%20-%20QUIERO%20REGISTRARME%0A%0A**Nombre%20del%20Restaurante:**%20%0A**Nombre%20del%20Dueño:**%20%0A**Teléfono:**%20%0A%0A¡He%20leído%20el%20contrato%20y%20acepto!" target="_blank" class="btn">✅ Acepto y Me Registro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/527261604509?text=Hola,%20me%20interesa%20registrar%20mi%20restaurante%20en%20Link%20City.%20Quiero%20más%20información." target="_blank" class="whatsapp-btn">
+            💬 Registrate
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Link City | FoodLink. Conectando restaurantes con más clientes en México. 🇲🇽</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Plataforma 100% mexicana para el crecimiento de negocios locales</p>
+        </div>
+    </footer>
+
+    <script>
+        console.log('🚀 Inicializando Link City - Versión Optimizada');
+
+        // Array de restaurantes con URLs exactas proporcionadas
+        const restaurantes = [
+            { nombre: "McDonald's", url: "https://i.imgur.com/xWz9525.jpg", categoria: "Comida Rápida" },
+            { nombre: "Golden Bowl", url: "https://i.imgur.com/1Gfgon2.jpg", categoria: "Comida China" },
+            { nombre: "Pollo Feliz", url: "https://i.imgur.com/AnYaPYL.jpg", categoria: "Pollo" },
+            { nombre: "Valverde's Coffee", url: "https://i.imgur.com/0dPKimI.jpg", categoria: "Cafetería" },
+            { nombre: "Little Caesars Pizza", url: "https://i.imgur.com/6JkPtDu.jpg", categoria: "Pizza" },
+            { nombre: "Starbucks", url: "https://i.imgur.com/attOuYb.jpg", categoria: "Cafetería" },
+            { nombre: "Píib Cochinita Pibil", url: "https://i.imgur.com/xpCak2o.jpg", categoria: "Cochinita Pibil" },
+            { nombre: "Sushi Paradise", url: "https://i.imgur.com/MLeBrBC.jpg", categoria: "Sushi" },
+            { nombre: "Raspados Super Lucas", url: "https://i.imgur.com/d2yTSBD.jpg", categoria: "Raspados" },
+            { nombre: "Rico Antojo", url: "https://i.imgur.com/ezMa2l3.jpg", categoria: "Antojitos" },
+            { nombre: "Guiño Café", url: "https://i.imgur.com/BFQUhjr.jpg", categoria: "Cafetería" },
+            { nombre: "La Bendita Café", url: "https://i.imgur.com/M6mOUgA.jpg", categoria: "Café" },
+            { nombre: "Lupita Barra Mexicana", url: "https://i.imgur.com/dQoTSHQ.jpg", categoria: "Comida Mexicana" },
+            { nombre: "Donuts World PXM", url: "https://i.imgur.com/Cvo40XR.jpg", categoria: "Donuts" },
+            { nombre: "Hierba Mala", url: "https://i.imgur.com/6hN6fjC.jpg", categoria: "Restaurante" },
+            { nombre: "Good Healthy Food", url: "https://i.imgur.com/u0lkfkE.jpg", categoria: "Comida Saludable" },
+            { nombre: "Pollo Pechugón", url: "https://i.imgur.com/nKJl469.jpg", categoria: "Pollo" }
+        ];
+
+        // Función mejorada para cargar restaurantes
+        function loadRestaurants() {
+            console.log('📋 Cargando restaurantes...');
+            const grid = document.getElementById('restaurantsGrid');
+            
+            if (!grid) {
+                console.error('❌ Grid de restaurantes no encontrado');
+                return;
+            }
+
+            // Limpiar contenido existente
+            grid.innerHTML = '';
+            
+            restaurantes.forEach((rest, index) => {
+                // Crear elemento de card
+                const card = document.createElement('div');
+                card.className = 'restaurant-card';
+                card.title = `${rest.nombre} - ${rest.categoria}`;
+                
+                // Crear estructura HTML
+                card.innerHTML = `
+                    <div class="restaurant-image">
+                        <img src="${rest.url}" 
+                             alt="${rest.nombre}" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/200x200/4ade80/ffffff?text=${encodeURIComponent(rest.nombre)}'; console.warn('⚠️ Imagen fallback para: ${rest.nombre}');"
+                             onload="console.log('✅ Imagen cargada: ${rest.nombre}');">
+                    </div>
+                    <div class="restaurant-info">
+                        <h4>${rest.nombre}</h4>
+                        <p>${rest.categoria}</p>
+                    </div>
+                `;
+                
+                // Agregar al grid con delay progresivo para animación
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    grid.appendChild(card);
+                    
+                    // Animar entrada
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.5s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                }, index * 100);
+            });
+            
+            console.log('✅ Restaurantes cargados:', restaurantes.length);
+        }
+
+        // Función mejorada para el formulario
+        function initializeForm() {
+            console.log('📝 Inicializando formulario...');
+            const form = document.getElementById('restaurantForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const messageContainer = document.getElementById('messageContainer');
+            
+            if (!form || !submitBtn) {
+                console.error('❌ Elementos del formulario no encontrados');
+                return;
+            }
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                console.log('📤 Procesando envío del formulario...');
+                
+                // Obtener datos del formulario
+                const formData = {
+                    restaurantName: document.getElementById('restaurantName').value.trim(),
+                    ownerName: document.getElementById('ownerName').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    address: document.getElementById('address').value.trim(),
+                    cuisine: document.getElementById('cuisine').value.trim()
+                };
+                
+                console.log('📊 Datos recolectados:', formData);
+                
+                // Validación mejorada
+                const requiredFields = [
+                    { key: 'restaurantName', name: 'Nombre del Restaurante', element: document.getElementById('restaurantName') },
+                    { key: 'ownerName', name: 'Nombre del Dueño', element: document.getElementById('ownerName') },
+                    { key: 'email', name: 'Correo Electrónico', element: document.getElementById('email') },
+                    { key: 'phone', name: 'Teléfono', element: document.getElementById('phone') },
+                    { key: 'address', name: 'Dirección', element: document.getElementById('address') },
+                    { key: 'cuisine', name: 'Tipo de Cocina', element: document.getElementById('cuisine') }
+                ];
+                
+                let hasErrors = false;
+                let errorMessages = [];
+                
+                // Validar campos requeridos
+                requiredFields.forEach(field => {
+                    if (!formData[field.key]) {
+                        field.element.style.borderColor = '#ef4444';
+                        field.element.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+                        errorMessages.push(`• ${field.name} es obligatorio`);
+                        hasErrors = true;
+                    } else {
+                        field.element.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                        field.element.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    }
+                });
+                
+                // Validar email específicamente
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (formData.email && !emailRegex.test(formData.email)) {
+                    document.getElementById('email').style.borderColor = '#ef4444';
+                    errorMessages.push('• El formato del email no es válido');
+                    hasErrors = true;
+                }
+                
+                // Validar teléfono
+                if (formData.phone && formData.phone.length < 10) {
+                    document.getElementById('phone').style.borderColor = '#ef4444';
+                    errorMessages.push('• El teléfono debe tener al menos 10 dígitos');
+                    hasErrors = true;
+                }
+                
+                // Mostrar errores si existen
+                if (hasErrors) {
+                    showMessage(`❌ Por favor corrige estos errores:\n\n${errorMessages.join('\n')}`, 'error');
+                    return;
+                }
+                
+                // Procesar envío exitoso
+                console.log('✅ Validación exitosa, preparando WhatsApp...');
+                
+                // Cambiar estado del botón
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="loading"></span>Preparando WhatsApp...';
+                submitBtn.disabled = true;
+                
+                // Obtener texto del select
+                const cuisineSelect = document.getElementById('cuisine');
+                const cuisineText = cuisineSelect.options[cuisineSelect.selectedIndex].text;
+                
+                // Crear mensaje para WhatsApp
+                const whatsappMessage = `🍽️ REGISTRO LINK CITY
+
+🏪 Restaurante: ${formData.restaurantName}
+👤 Dueño: ${formData.ownerName}
+📧 Email: ${formData.email}
+📱 Teléfono: ${formData.phone}
+📍 Dirección: ${formData.address}
+🍳 Tipo: ${cuisineText}
+
+✅ Formulario completado desde web
+Fecha: ${new Date().toLocaleDateString('es-MX')}
+
+¡Hola! Quiero registrar mi restaurante en Link City con 0% comisiones. Mis datos están completos arriba. ¿Cuáles son los siguientes pasos para empezar?`;
+                
+                const whatsappURL = `https://wa.me/527261604509?text=${encodeURIComponent(whatsappMessage)}`;
+                
+                // Enviar a WhatsApp después de una pausa
+                setTimeout(() => {
+                    try {
+                        // Abrir WhatsApp
+                        const whatsappWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+                        
+                        // Verificar si se abrió correctamente
+                        setTimeout(() => {
+                            if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed == 'undefined') {
+                                // Fallback: redirigir en la misma ventana
+                                window.location.href = whatsappURL;
+                            }
+                        }, 1000);
+                        
+                        // Mostrar mensaje de éxito
+                        submitBtn.innerHTML = '✅ ¡Enviado a WhatsApp!';
+                        showMessage(`📱 ¡Registro enviado exitosamente!
+
+✅ Tus datos se han enviado por WhatsApp
+📞 Te contactaremos en las próximas 24 horas
+💰 Recuerda: 0% comisiones, 100% ganancias
+
+Si WhatsApp no se abrió automáticamente:
+👆 Haz clic aquí: wa.me/527261604509`, 'success');
+                        
+                        // Resetear formulario después de 8 segundos
+                        setTimeout(() => {
+                            form.reset();
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                            
+                            // Limpiar estilos de validación
+                            requiredFields.forEach(field => {
+                                field.element.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                                field.element.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                            });
+                            
+                            if (messageContainer) {
+                                messageContainer.innerHTML = '';
+                            }
+                        }, 8000);
+                        
+                    } catch (error) {
+                        console.error('❌ Error al enviar WhatsApp:', error);
+                        submitBtn.innerHTML = '❌ Error - Intenta de nuevo';
+                        showMessage('❌ Hubo un error al abrir WhatsApp. Por favor intenta de nuevo o contacta directamente al +52 726 160 4509', 'error');
+                        
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    }
+                }, 1000);
+            });
+            
+            console.log('✅ Formulario inicializado correctamente');
+        }
+
+        // Función para mostrar mensajes
+        function showMessage(message, type = 'success') {
+            const messageContainer = document.getElementById('messageContainer');
+            if (!messageContainer) return;
+            
+            const className = type === 'error' ? 'error-message' : 'success-message';
+            messageContainer.innerHTML = `
+                <div class="${className}">
+                    ${message.replace(/\n/g, '<br>')}
+                </div>
+            `;
+        }
+
+        // Función para animaciones de scroll
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos para animación
+            document.querySelectorAll('.benefit-item, .highlight-card, .city-item').forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+        }
+
+        // Inicialización principal
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🎯 DOM cargado - Iniciando aplicación...');
+            
+            try {
+                // Inicializar componentes
+                loadRestaurants();
+                initializeForm();
+                initScrollAnimations();
+                
+                console.log('🎉 Link City inicializado exitosamente');
+                
+            } catch (error) {
+                console.error('❌ Error durante la inicialización:', error);
+            }
+        });
+
+        // Manejo de errores globales
+        window.addEventListener('error', function(e) {
+            console.error('❌ Error global capturado:', e.error);
+        });
+
+        console.log('📱 Script de Link City cargado - Versión Optimizada');
+    </script>
+</body>
+</html>
